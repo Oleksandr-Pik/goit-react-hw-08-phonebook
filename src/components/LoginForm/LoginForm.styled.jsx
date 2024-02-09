@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 300px;
+  height: 80vh;
+  width: 360px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
   margin: 0 auto;
 `;
 
@@ -16,7 +20,6 @@ export const Form = styled.form`
   border-radius: 12px;
   box-shadow: 10px 10px 5px -7px rgb(164, 164, 164);
   background-color: #f6f8fa;
-  margin-bottom:30px;
 `;
 
 export const Input = styled.input`

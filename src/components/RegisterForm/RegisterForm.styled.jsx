@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 300px;
+  height: 80vh;
+  width: 360px;
+  display: flex;
+  align-items: center;
   margin: 0 auto;
 `;
 
@@ -9,14 +12,11 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 300px;
-  /* outline: 1px solid; */
   padding: 30px;
-  /* padding: 4px 14px; */
   border: 1px solid rgb(226, 229, 232);
   border-radius: 12px;
   box-shadow: 10px 10px 5px -7px rgb(164, 164, 164);
   background-color: #f6f8fa;
-  margin-bottom:30px;
 `;
 
 export const Input = styled.input`

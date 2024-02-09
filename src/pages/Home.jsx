@@ -1,9 +1,18 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 export default function Home () {
   return (
-    <div>
+    <div 
+    style={{
+      // height: '100vh',
+      // display: 'flex',
+      // justifyContent: 'center',
+      // alignItems: 'center',
+      textAlign: 'center',
+      fontSize: 20,
+      color: '#010101'
+    }}>
       <Helmet>
         <title>Your PhoneBook</title>
       </Helmet>

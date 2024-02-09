@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  /* padding: 0 30px; */
-  margin: auto;
-  padding: 20px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
   gap: 14px;
 `;

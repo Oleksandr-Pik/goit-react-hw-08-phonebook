@@ -7,11 +7,12 @@ import {
   selectContactsFilter,
   selectIsLoading,
   selectError,
-} from '../../redux/selectors';
+} from '../../redux/contacts/selectors';
 
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations';
 import { Spinner } from 'components/Spinner/Spinner';
+import { List, ListItem } from './ContactList.styled';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -44,16 +45,15 @@ const ContactList = () => {
         </p>
       )}
       {visibleContacts.length > 0 ? (
-        <ul>
+        <List>
           {visibleContacts.map(contact => (
-            <li key={contact.id}>
+            <ListItem key={contact.id}>
               <ContactListItem
                 contact={contact}
-                // onDeleteContact={handleDeleteContact}
               />
-            </li>
+            </ListItem>
           ))}
-        </ul>
+        </List>
       ) : (
         <p>No contacts</p>
       )}

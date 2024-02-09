@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { Button, Form, Input } from './ContactForm.styled';
+import { Button, Wrapper, Form, Input } from './ContactForm.styled';
 
 import { toast } from 'react-hot-toast';
 import { addContact } from '../../redux/contacts/operations';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContactsList, selectIsLoading } from '../../redux/selectors';
+import {
+  selectContactsList,
+  selectIsLoading,
+} from '../../redux/contacts/selectors';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -54,29 +57,33 @@ const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={createContact}>
-      <label htmlFor="name">Name</label>
-      <Input
-        type="text"
-        name="name"
-        id="name"
-        required
-        onChange={handleChange}
-        placeholder="Enter name"
-        value={name}
-      />
-      <label htmlFor="number">Number</label>
-      <Input
-        type="tel"
-        name="number"
-        id="number"
-        required
-        onChange={handleChange}
-        placeholder="Enter number"
-        value={number}
-      />
-      <Button type="submin" disabled={isFetching} >Add contact</Button>
-    </Form>
+    <Wrapper>
+      <Form onSubmit={createContact}>
+        <label htmlFor="name">Name</label>
+        <Input
+          type="text"
+          name="name"
+          id="name"
+          required
+          onChange={handleChange}
+          placeholder="Enter name"
+          value={name}
+        />
+        <label htmlFor="number">Number</label>
+        <Input
+          type="tel"
+          name="number"
+          id="number"
+          required
+          onChange={handleChange}
+          placeholder="Enter number"
+          value={number}
+        />
+        <Button type="submin" disabled={isFetching}>
+          Add contact
+        </Button>
+      </Form>
+    </Wrapper>
   );
 };
 

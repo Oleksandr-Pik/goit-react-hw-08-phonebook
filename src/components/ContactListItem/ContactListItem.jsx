@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container } from './ContactListItem.styled';
+import { Wrapper, PhoneIcon, UserIcon, Button } from './ContactListItem.styled';
 import { toast } from 'react-hot-toast';
 import { deleteContact } from '../../redux/contacts/operations';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading } from '../../redux/selectors';
+import { selectIsLoading } from '../../redux/contacts/selectors';
 
 const ContactListItem = ({ contact }) => {
   const dispatch = useDispatch();
@@ -15,15 +15,20 @@ const ContactListItem = ({ contact }) => {
   };
 
   return (
-    <Container>
+    <Wrapper>
       <p>
-        {contact.name}: {contact.number}{' '}
+        <UserIcon /> {contact.name}
       </p>
-      <button onClick={() => handleDeleteContact(contact.id)} disabled={isFetching}>
-        {/* {isFetching && <Spinner size={12} />} */}
+      <p>
+        <PhoneIcon /> {contact.number}
+      </p>
+      <Button
+        onClick={() => handleDeleteContact(contact.id)}
+        disabled={isFetching}
+      >
         Delete
-      </button>
-    </Container>
+      </Button>
+    </Wrapper>
   );
 };
 
