@@ -8,9 +8,13 @@ export const List = styled.ul`
   /* margin-left: auto; */
   /* margin-right: auto; */
   justify-content: center;
+
+  /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px; */
 `;
 
-export const ListItem = styled.ul`
+export const ListItem = styled.li`
   /* margin-left: auto;
   margin-right: auto; */
 `;
