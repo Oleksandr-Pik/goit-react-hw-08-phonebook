@@ -9,7 +9,7 @@ const AuthNav = () => {
         <button>Log In</button>
       </NavLink>
       <NavLink to="/register">
-        <button>Register</button>
+        <button>Signup</button>
       </NavLink>
     </Wrapper>
   )

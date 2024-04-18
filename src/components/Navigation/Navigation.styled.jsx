@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  padding: 0 20px;
+  padding: 10px;
+  flex-wrap: wrap;
   display: flex;
   gap: 14px;
   font-size: 20px;
